@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>App v1.0</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <link rel="stylesheet" href="http://tagplan.me/web/fortawesome/css/font-awesome.css">
+    <!-- librerias jquery -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="http://www.tagplan.me/app/class.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#recibido").load("http://www.tagplan.me/");
+        });
+    </script>
+    <style media="screen">
+        body {
+            margin: 0;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        li {
+            float: left;
+        }
+        
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+        
+        .active {
+            background-color: #4CAF50;
+        }
+    </style>
+
+    <body>
+
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+
+        <div style="padding:20px;background-color:#1abc9c;height:1500px;">
+            <h2 id="recibido">Recibido</h2>
+
+            <h2>Scroll this page to see the effect</h2>
+            <h2>The navigation bar will stay at the bottom of the page while scrolling</h2>
+
+            <!-- --------------------------------------------------------- LOGIN --------------------------------------------------- -->
+            <div data-role="page" id="login">
+                <div data-role="header">
+                    <h2>Login</h2>
+                </div>
+                <div role="main" class="ui-content">
+                    <input placeholder="Usuario" type="text" name="text-1" id="txtUsername" value="">
+                    <input placeholder="Contraseña" type="password" name="text-1" id="txtPassword" value="">
+                    <a href="#olvido">Olvido su contraseña?</a>
+                    <button class="ui-btn ui-corner-all" id="btnLogin">Entrar</button>
+                    <a href="#registro" class="ui-btn ui-corner-all">Registro</a>
+                </div>
+            </div>
+
+            <!-- --------------------------------------------- RECUPERAR PASSWORD ----------------------------------------------- -->
+            <div data-role="page" id="olvido">
+                <div data-role="header">
+                    <h2>Recuperar Contraseña</h2>
+                </div>
+                <div role="main" class="ui-content">
+                    <input placeholder="correo@example.com" type="email" name="text-1" id="txtcorreoOlvido" value="">
+                    <button class="ui-btn ui-corner-all" id="btnLogin">Listo!! </button>
+                    <a href="#login" class="ui-btn ui-corner-all">Cancelar</a>
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
